@@ -4,8 +4,15 @@
 ## Benchmark
 
 ### Tests methods
+We're going to perform benchmarks against different way to filter values in array:
 
-#### One Filter
+* stream + one filter
+* stream + multiple filters 
+* parallel stream + one filter 
+* parallel stream + multiple filters
+* old fashion java iteration 
+
+#### Stream + one filter
 
 ```java
 public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
@@ -21,7 +28,7 @@ public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### Multiple filters
+#### Stream + multiple filters 
 
 ```java
 public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
@@ -37,7 +44,7 @@ public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### One Filter (parallel stream) 
+#### Parallel stream + one filter 
 
 ```java
 public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
@@ -54,7 +61,7 @@ public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### Multiple filters (parallel stream) 
+#### Parallel stream + multiple filters
 
 ```java
 public void multipleFiltersParallel(ExecutionPlan plan, Blackhole blackhole) {
@@ -72,7 +79,7 @@ public void multipleFiltersParallel(ExecutionPlan plan, Blackhole blackhole) {
 
 ```
 
-#### Old fashion loop with one filter 
+#### Old fashion java iteration 
 
 ```java
 public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {

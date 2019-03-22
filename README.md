@@ -1,10 +1,8 @@
 # Java Filter Benchmarks
 
+## Introduction
 
-## Benchmark
-
-### Tests methods
-We're going to perform benchmarks against different way to filter values in array:
+We're going to perform benchmarks against the different way to filter values in the array 
 
 * stream + one filter
 * stream + multiple filters 
@@ -12,7 +10,7 @@ We're going to perform benchmarks against different way to filter values in arra
 * parallel stream + multiple filters
 * old fashion java iteration 
 
-#### Stream + one filter
+### Stream + one filter
 
 ```java
 public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
@@ -28,7 +26,7 @@ public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### Stream + multiple filters 
+### Stream + multiple filters 
 
 ```java
 public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
@@ -44,7 +42,7 @@ public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### Parallel stream + one filter 
+### Parallel stream + one filter 
 
 ```java
 public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
@@ -61,7 +59,7 @@ public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-#### Parallel stream + multiple filters
+### Parallel stream + multiple filters
 
 ```java
 public void multipleFiltersParallel(ExecutionPlan plan, Blackhole blackhole) {
@@ -79,7 +77,7 @@ public void multipleFiltersParallel(ExecutionPlan plan, Blackhole blackhole) {
 
 ```
 
-#### Old fashion java iteration 
+### Old fashion java iteration 
 
 ```java
 public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
@@ -98,20 +96,20 @@ public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
 
 ```
 
-### Environment 
+## Environment 
 
 * 8 CPU
 * 64 GB RAM 
 * OS version: 16.04.1 LTS (Xenial Xerus)
  
 
-### Run benchmarks
+## Run benchmarks
 
 ```commandline
 java -jar target/benchmarks.jar -gc true -jvmArgsAppend="-XX:+UseG1GC -server -Xmx1024m -Xms1024m"
 ```
 
-### Results
+## Results
 
 ```
 Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
@@ -148,30 +146,35 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt  100      428.808 ? 
 ```
 
 
-#### 10 Element Array
+### 10 Element Array
 
 <img width="599" alt="10 element array" src="https://user-images.githubusercontent.com/4140597/54838691-1ff41600-4cc1-11e9-9021-14ea1673a037.png">
 
-#### 100 Element Array
+### 100 Element Array
 
 <img width="594" alt="100 element array" src="https://user-images.githubusercontent.com/4140597/54838780-5a5db300-4cc1-11e9-9579-4fd4a8845c2f.png">
 
-#### 1,000 Element Array
+### 1,000 Element Array
 
 <img width="594" alt="1000 element array" src="https://user-images.githubusercontent.com/4140597/54838848-7a8d7200-4cc1-11e9-981e-28f4382e9021.png">
 
-#### 10,000 Element Array
+### 10,000 Element Array
 
 <img width="592" alt="10000 element array" src="https://user-images.githubusercontent.com/4140597/54838893-97c24080-4cc1-11e9-941c-5d352f01ab8c.png">
 
-#### 100,000 Element Array
+### 100,000 Element Array
 
 <img width="591" alt="100000 element array" src="https://user-images.githubusercontent.com/4140597/54838948-b4f70f00-4cc1-11e9-9ef6-a003e15d2f36.png">
 
-#### 1,000,000 Element Array
+### 1,000,000 Element Array
 
 <img width="596" alt="1000000 element array" src="https://user-images.githubusercontent.com/4140597/54838993-d7892800-4cc1-11e9-9c75-80474bc6036f.png">
 
+## Summary 
+
+On a relatively small array old fashion loop with one if clause shows the best performance results, 
+but while an array is growing java parallel streams show better results. 
+According to performance results, for a performance perspective, one filter is better than multiple filters.
 
 ## License
 -------

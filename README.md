@@ -55,15 +55,17 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt  100      428.808 ? 
 
 #### 10 Element Array
 
+<img width="599" alt="10 element array" src="https://user-images.githubusercontent.com/4140597/54838691-1ff41600-4cc1-11e9-9021-14ea1673a037.png">
+
 #### 100 Element Array
 
 #### 1,000 Element Array
 
 #### 10,000 Element Array
 
-### 100,000 Element Array
+#### 100,000 Element Array
 
-### 1,000,000 Element Array
+#### 1,000,000 Element Array
 
 ## Summary 
 

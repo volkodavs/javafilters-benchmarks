@@ -3,6 +3,94 @@
 
 ## Benchmark
 
+### Tests methods
+
+#### One Filter
+
+```java
+public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
+        long count = plan.getDoubles()
+                .stream()
+                .filter(d -> d < Math.PI
+                        && d > Math.E
+                        && d != 3
+                        && d != 2)
+                .count();
+
+        blackhole.consume(count);
+    }
+```
+
+#### Multiple filters
+
+```java
+public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
+        long count = plan.getDoubles()
+                .stream()
+                .filter(d -> d > Math.PI)
+                .filter(d -> d < Math.E)
+                .filter(d -> d != 3)
+                .filter(d -> d != 2)
+                .count();
+
+        blackhole.consume(count);
+    }
+```
+
+#### One Filter (parallel stream) 
+
+```java
+public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
+        long count = plan.getDoubles()
+                .stream()
+                .parallel()
+                .filter(d -> d < Math.PI
+                        && d > Math.E
+                        && d != 3
+                        && d != 2)
+                .count();
+
+        blackhole.consume(count);
+    }
+```
+
+#### Multiple filters (parallel stream) 
+
+```java
+public void multipleFiltersParallel(ExecutionPlan plan, Blackhole blackhole) {
+        long count = plan.getDoubles()
+                .stream()
+                .parallel()
+                .filter(d -> d > Math.PI)
+                .filter(d -> d < Math.E)
+                .filter(d -> d != 3)
+                .filter(d -> d != 2)
+                .count();
+
+        blackhole.consume(count);
+    }
+
+```
+
+#### Old fashion loop with one filter 
+
+```java
+public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
+        long count = 0;
+        for (int i = 0; i < plan.getDoubles().size(); i++) {
+            if (plan.getDoubles().get(i) > Math.PI
+                    && plan.getDoubles().get(i) > Math.E
+                    && plan.getDoubles().get(i) != 3
+                    && plan.getDoubles().get(i) != 2) {
+                count = count + 1;
+            }
+        }
+
+        blackhole.consume(count);
+    }
+
+```
+
 ### Environment 
 
 * 8 CPU
@@ -10,11 +98,11 @@
 * OS version: 16.04.1 LTS (Xenial Xerus)
  
 
-### 
-```commandline
-java -jar target/benchmarks.jar -jvmArgsAppend="-XX:+UseG1GC -server -Xmx1024m -Xms1024m"
-```
+### Run benchmarks
 
+```commandline
+java -jar target/benchmarks.jar -gc true -jvmArgsAppend="-XX:+UseG1GC -server -Xmx1024m -Xms1024m"
+```
 
 ### Results
 

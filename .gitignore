@@ -1,0 +1,86 @@
+##
+## JAVA
+##
+# Compiled class files #
+*.class
+
+# Log files #
+*.log
+logs/
+
+# Package files #
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+
+##
+## MAVEN
+##
+# Build folder #
+**/target
+
+##
+## IntelliJ
+##
+# User-specific configuration #
+.idea/
+.idea_modules/
+
+# Project files
+*.iws
+*.iml
+
+# Output folder #
+out/
+
+##
+## Eclipse
+##
+# User-specific configuration #
+local.properties
+.metadata
+.settings/
+
+# Output folder #
+bin/
+
+# Temporary files #
+tmp/
+*.tmp
+*.bak
+
+##
+## NetBeans
+##
+# User-specific configuration #
+**/nbproject/**
+
+# Output folders #
+build/
+nbbuild/
+dist/
+nbdist/
+
+##
+## Linux
+##
+# Unwanted files and folders #
+*~
+.Trash-*
+.nfs*
+
+##
+## MacOS
+##
+# General #
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Unwanted files and folders #
+.TemporaryItems
+.Trashes
+Network Trash Folder
+Temporary Items

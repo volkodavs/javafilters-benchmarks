@@ -1,6 +1,73 @@
 # Java filters benchmarks
 
 
+## Benchmark
+
+### Environment 
+
+* 8 CPU
+* 64 RAM 
+* OS version: 16.04.1 LTS (Xenial Xerus)
+ 
+
+### 
+```commandline
+java -jar target/benchmarks.jar -jvmArgsAppend="-XX:+UseG1GC -server -Xmx1024m -Xms1024m"
+```
+
+
+### Results
+
+```
+Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
+FilterBenchmark.multipleFilters                   10  thrpt  100  2075839.682 ? 44630.046  ops/s
+FilterBenchmark.multipleFilters                  100  thrpt  100   818681.739 ? 12685.772  ops/s
+FilterBenchmark.multipleFilters                 1000  thrpt  100   112650.014 ?  1564.992  ops/s
+FilterBenchmark.multipleFilters                10000  thrpt  100    11865.622 ?   174.080  ops/s
+FilterBenchmark.multipleFilters               100000  thrpt  100     1517.454 ?    33.562  ops/s
+FilterBenchmark.multipleFilters              1000000  thrpt  100      128.234 ?     3.729  ops/s
+FilterBenchmark.multipleFiltersParallel           10  thrpt  100    23671.753 ?   345.838  ops/s
+FilterBenchmark.multipleFiltersParallel          100  thrpt  100    22223.019 ?   240.080  ops/s
+FilterBenchmark.multipleFiltersParallel         1000  thrpt  100    19721.119 ?   226.894  ops/s
+FilterBenchmark.multipleFiltersParallel        10000  thrpt  100    12232.491 ?   211.326  ops/s
+FilterBenchmark.multipleFiltersParallel       100000  thrpt  100     3060.223 ?   100.179  ops/s
+FilterBenchmark.multipleFiltersParallel      1000000  thrpt  100      420.251 ?    30.058  ops/s
+FilterBenchmark.oldFashionFilters                 10  thrpt  100  5496434.401 ? 35947.633  ops/s
+FilterBenchmark.oldFashionFilters                100  thrpt  100  1516603.187 ? 12593.856  ops/s
+FilterBenchmark.oldFashionFilters               1000  thrpt  100   189934.246 ?   624.064  ops/s
+FilterBenchmark.oldFashionFilters              10000  thrpt  100    19155.646 ?    93.957  ops/s
+FilterBenchmark.oldFashionFilters             100000  thrpt  100     1892.971 ?     8.023  ops/s
+FilterBenchmark.oldFashionFilters            1000000  thrpt  100      159.529 ?     5.704  ops/s
+FilterBenchmark.oneFilter                         10  thrpt  100  2832471.559 ? 41248.974  ops/s
+FilterBenchmark.oneFilter                        100  thrpt  100   898120.270 ? 42906.528  ops/s
+FilterBenchmark.oneFilter                       1000  thrpt  100   133993.137 ?   698.773  ops/s
+FilterBenchmark.oneFilter                      10000  thrpt  100    13844.118 ?   156.972  ops/s
+FilterBenchmark.oneFilter                     100000  thrpt  100     1455.707 ?     9.031  ops/s
+FilterBenchmark.oneFilter                    1000000  thrpt  100      128.531 ?     3.197  ops/s
+FilterBenchmark.oneFilterParallel                 10  thrpt  100    23714.956 ?   342.890  ops/s
+FilterBenchmark.oneFilterParallel                100  thrpt  100    22299.120 ?   244.461  ops/s
+FilterBenchmark.oneFilterParallel               1000  thrpt  100    19493.699 ?   288.293  ops/s
+FilterBenchmark.oneFilterParallel              10000  thrpt  100    12274.638 ?   423.781  ops/s
+FilterBenchmark.oneFilterParallel             100000  thrpt  100     4613.809 ?   128.038  ops/s
+FilterBenchmark.oneFilterParallel            1000000  thrpt  100      428.808 ?    37.583  ops/s
+```
+
+
+#### 10 Element Array
+
+#### 100 Element Array
+
+#### 1,000 Element Array
+
+#### 10,000 Element Array
+
+### 100,000 Element Array
+
+### 1,000,000 Element Array
+
+## Summary 
+
+
 ## License
 -------
     MIT License

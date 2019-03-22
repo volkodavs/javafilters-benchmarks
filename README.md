@@ -1,4 +1,4 @@
-# Java filters benchmarks
+# Java Filter Benchmarks
 
 
 ## Benchmark
@@ -101,7 +101,7 @@ public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
 ### Environment 
 
 * 8 CPU
-* 64 RAM 
+* 64 GB RAM 
 * OS version: 16.04.1 LTS (Xenial Xerus)
  
 
@@ -171,8 +171,6 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt  100      428.808 ? 
 #### 1,000,000 Element Array
 
 <img width="596" alt="1000000 element array" src="https://user-images.githubusercontent.com/4140597/54838993-d7892800-4cc1-11e9-9c75-80474bc6036f.png">
-
-## Summary 
 
 
 ## License

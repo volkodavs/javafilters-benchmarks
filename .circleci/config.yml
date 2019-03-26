@@ -19,6 +19,13 @@ jobs:
       - run:
           name: Build Java Benchmark
           command: |
+            mvn clean package
+
+      - run:
+          name: deploy to docker hub
+          command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            mvn clean deploy
+            docker push volkodav/java-filter-benchmark:java8
+            docker push volkodav/java-filter-benchmark:java12
+
 

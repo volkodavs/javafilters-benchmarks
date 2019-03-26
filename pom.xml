@@ -114,7 +114,7 @@
                             <goal>push</goal>
                         </goals>
                         <configuration>
-                            <repository>svolkodav/java-filter-benchmark</repository>
+                            <repository>volkodav/java-filter-benchmark</repository>
                             <dockerfile>docker/Dockerfile8</dockerfile>
                             <tag>java8</tag>
                             <buildArgs>
@@ -130,7 +130,7 @@
                             <goal>push</goal>
                         </goals>
                         <configuration>
-                            <repository>svolkodav/java-filter-benchmark</repository>
+                            <repository>volkodav/java-filter-benchmark</repository>
                             <dockerfile>docker/Dockerfile12</dockerfile>
                             <tag>java12</tag>
                             <buildArgs>

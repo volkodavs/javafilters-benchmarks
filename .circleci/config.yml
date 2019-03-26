@@ -6,7 +6,7 @@ jobs:
     working_directory: ~/java-benchmark
     steps:
       - checkout
-      - run: apk add --update curl git openssh openjdk8 nss maven  && rm -rf /var/cache/apk/*
+      - run: sudo apt-get install docker
       - restore_cache:
           key: java-benchmark-{{ checksum "pom.xml" }}
       - run: mvn --fail-never dependency:go-offline || true

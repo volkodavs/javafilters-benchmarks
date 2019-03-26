@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: sudo apt-get install docker
+      - run: apk add --update curl git openssh openjdk8 nss maven && rm -rf /var/cache/apk/*
       - restore_cache:
           key: java-benchmark-{{ checksum "pom.xml" }}
       - run: mvn --fail-never dependency:go-offline || true
@@ -19,6 +19,5 @@ jobs:
       - run:
           name: Build Java Benchmark
           command: |
-#            docker login -u $DOCKER_USER -p $DOCKER_PASS
             mvn clean package
 

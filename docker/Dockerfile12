@@ -1,0 +1,9 @@
+FROM openjdk:12-jdk
+
+COPY /target/benchmarks.jar /app/benchmarks.jar
+COPY docker/scripts/ /app
+
+RUN sh -c 'chmod +x /app/entrypoint.sh' \
+    && sleep 1
+
+ENTRYPOINT ["/app/entrypoint.sh"]

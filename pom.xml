@@ -34,6 +34,8 @@
         <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
         <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
 
+        <!--Docker -->
+        <dockerfile-maven-version>1.4.10</dockerfile-maven-version>
     </properties>
 
     <dependencies>
@@ -99,6 +101,45 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>${dockerfile-maven-version}</version>
+                <executions>
+                    <execution>
+                        <id>java8</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                        <configuration>
+                            <repository>svolkodav/java-filter-benchmark</repository>
+                            <dockerfile>docker/Dockerfile8</dockerfile>
+                            <tag>java8</tag>
+                            <buildArgs>
+                                <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                            </buildArgs>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>java12</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                        <configuration>
+                            <repository>svolkodav/java-filter-benchmark</repository>
+                            <dockerfile>docker/Dockerfile12</dockerfile>
+                            <tag>java12</tag>
+                            <buildArgs>
+                                <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                            </buildArgs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -141,5 +182,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

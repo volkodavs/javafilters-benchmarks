@@ -2,10 +2,11 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk-browsers
+      - image: docker:17.05.0-ce-git
     working_directory: ~/java-benchmark
     steps:
       - checkout
+      - run: apt-get install maven
       - restore_cache:
           key: java-benchmark-{{ checksum "pom.xml" }}
       - run: mvn --fail-never dependency:go-offline || true

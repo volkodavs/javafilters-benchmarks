@@ -22,7 +22,7 @@ jobs:
             mvn clean package
 
       - run:
-          name: deploy to docker hub
+          name: Deploy to docker hub
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push volkodav/java-filter-benchmark:java8

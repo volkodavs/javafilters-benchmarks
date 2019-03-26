@@ -6,6 +6,7 @@ jobs:
     working_directory: ~/java-benchmark
     steps:
       - checkout
+      - setup_remote_docker
       - run: sudo apt-get install docker
       - restore_cache:
           key: java-benchmark-{{ checksum "pom.xml" }}
@@ -18,5 +19,6 @@ jobs:
       - run:
           name: Build Java Benchmark
           command: |
+#            docker login -u $DOCKER_USER -p $DOCKER_PASS
             mvn clean package
 

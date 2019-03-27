@@ -102,10 +102,11 @@ public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
 * 64 GB RAM 
 * OS version: 16.04.1 LTS (Xenial Xerus)
  
-
 ## Run benchmarks
 
 ### Java 8
+
+java 8
 
 ```commandline
 docker run -it volkodav/java-filter-benchmark:java8
@@ -114,7 +115,8 @@ docker run -it volkodav/java-filter-benchmark:java8
 #### Params
 
 ```
-# VM version: JDK 1.8.0_181, VM 25.181-b13
+# OpenJDK Runtime Environment (build 1.8.0_181-8u181-b13-2~deb9u1-b13)
+# OpenJDK 64-Bit Server VM (build 25.181-b13, mixed mode)
 # VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 # VM options: -XX:+UseG1GC -server -Xmx1024m -Xms1024m
 # Warmup: 10 iterations, 1 s each
@@ -123,6 +125,7 @@ docker run -it volkodav/java-filter-benchmark:java8
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
 # Benchmark: com.sergeyvolkodav.FilterBenchmark.multipleFilters
+# CPU: 8 cores
 ```
 
 #### Results
@@ -163,6 +166,7 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt  100      397.795 ±
 
 
 ### Java 12 
+
 ```commandline
 docker run -it volkodav/java-filter-benchmark:java12
 ```
@@ -170,7 +174,8 @@ docker run -it volkodav/java-filter-benchmark:java12
 #### Params 
 
 ```
-# VM version: JDK 12, VM 12+33
+# OpenJDK Runtime Environment (build 12+33)
+# OpenJDK 64-Bit Server VM (build 12+33, mixed mode, sharing)
 # VM invoker: /usr/java/openjdk-12/bin/java
 # VM options: -XX:+UseG1GC -server -Xmx1024m -Xms1024m
 # Warmup: 10 iterations, 1 s each
@@ -179,6 +184,7 @@ docker run -it volkodav/java-filter-benchmark:java12
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
 # Benchmark: com.sergeyvolkodav.FilterBenchmark.multipleFilters
+# CPU: 8 cores
 ```
 
 #### Results
@@ -233,7 +239,6 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 
 <img width="590" alt="10,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069610-542e5480-507c-11e9-8e7d-6f67489673d3.png">
 
-
 ### 100,000 Element Array
 
 <img width="593" alt="100,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069641-69a37e80-507c-11e9-8107-b4928b71483b.png">
@@ -243,16 +248,15 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 <img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069708-95beff80-507c-11e9-9ef6-391761b3f722.png">
 
 
-
 ## Summary 
-
-### Comparison tables
-
-<img width="879" alt="Summary table " src="https://user-images.githubusercontent.com/4140597/55069946-1120b100-507d-11e9-8ecc-0ee0f87327e8.png">
 
 On a relatively small array old fashion loop with one if clause shows the best performance results, 
 but while an array is growing java parallel streams show better results. 
 According to performance results, for a performance perspective, one filter is better than multiple filters.
+
+### Comparison tables
+
+<img width="883" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55093062-9d49cd00-50ab-11e9-92a4-067a4a77b00d.png">
 
 ## License
 -------

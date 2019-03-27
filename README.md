@@ -246,7 +246,7 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 
 ## Summary 
 
-### Summary table 
+### Comparison tables
 
 <img width="879" alt="Summary table " src="https://user-images.githubusercontent.com/4140597/55069946-1120b100-507d-11e9-8ecc-0ee0f87327e8.png">
 

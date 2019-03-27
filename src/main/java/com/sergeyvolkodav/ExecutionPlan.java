@@ -18,7 +18,7 @@ public class ExecutionPlan {
     @Param({"10", "100", "1000", "10000", "100000", "1000000"})
     int arraySize;
 
-    @Setup(Level.Invocation)
+    @Setup(Level.Iteration)
     public void setUp() {
         doubles = new Random().doubles(arraySize, 1, 4)
                 .boxed()

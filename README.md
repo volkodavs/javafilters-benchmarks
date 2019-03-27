@@ -4,13 +4,13 @@
 
 We're going to perform benchmarks against the different way to filter values in the array 
 
-* stream + one filter
+* stream + complex filter
 * stream + multiple filters 
-* parallel stream + one filter 
+* parallel stream + complex filter 
 * parallel stream + multiple filters
 * old fashion java iteration 
 
-### Stream + one filter
+### Stream + complex filter
 
 ```java
 public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
@@ -42,7 +42,7 @@ public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
     }
 ```
 
-### Parallel stream + one filter 
+### Parallel stream + complex filter 
 
 ```java
 public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
@@ -128,7 +128,37 @@ docker run -it volkodav/java-filter-benchmark:java8
 #### Results
 
 ```
-
+Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
+FilterBenchmark.multipleFilters                   10  thrpt  100  1364546.517 ±  3579.906  ops/s
+FilterBenchmark.multipleFilters                  100  thrpt  100   687438.224 ±  5884.973  ops/s
+FilterBenchmark.multipleFilters                 1000  thrpt  100   110489.928 ±   800.637  ops/s
+FilterBenchmark.multipleFilters                10000  thrpt  100    12290.655 ±   104.239  ops/s
+FilterBenchmark.multipleFilters               100000  thrpt  100     1282.548 ±    36.517  ops/s
+FilterBenchmark.multipleFilters              1000000  thrpt  100      136.211 ±     2.938  ops/s
+FilterBenchmark.multipleFiltersParallel           10  thrpt  100    22482.268 ±   167.280  ops/s
+FilterBenchmark.multipleFiltersParallel          100  thrpt  100    23932.211 ±   105.224  ops/s
+FilterBenchmark.multipleFiltersParallel         1000  thrpt  100    20546.812 ±   207.322  ops/s
+FilterBenchmark.multipleFiltersParallel        10000  thrpt  100    12826.451 ±   105.562  ops/s
+FilterBenchmark.multipleFiltersParallel       100000  thrpt  100     3965.370 ±    58.927  ops/s
+FilterBenchmark.multipleFiltersParallel      1000000  thrpt  100      344.808 ±    34.809  ops/s
+FilterBenchmark.oldFashionFilters                 10  thrpt  100  2241545.032 ±  5936.237  ops/s
+FilterBenchmark.oldFashionFilters                100  thrpt  100  1067280.430 ±  2898.776  ops/s
+FilterBenchmark.oldFashionFilters               1000  thrpt  100   171715.214 ±   543.459  ops/s
+FilterBenchmark.oldFashionFilters              10000  thrpt  100    19263.648 ±    26.834  ops/s
+FilterBenchmark.oldFashionFilters             100000  thrpt  100     2038.695 ±     6.303  ops/s
+FilterBenchmark.oldFashionFilters            1000000  thrpt  100      172.616 ±     2.984  ops/s
+FilterBenchmark.oneFilter                         10  thrpt  100  1620558.903 ± 14856.116  ops/s
+FilterBenchmark.oneFilter                        100  thrpt  100   667080.168 ± 23007.882  ops/s
+FilterBenchmark.oneFilter                       1000  thrpt  100   118228.039 ±  6173.876  ops/s
+FilterBenchmark.oneFilter                      10000  thrpt  100    14281.845 ±    18.418  ops/s
+FilterBenchmark.oneFilter                     100000  thrpt  100     1468.491 ±     2.975  ops/s
+FilterBenchmark.oneFilter                    1000000  thrpt  100      130.511 ±     2.109  ops/s
+FilterBenchmark.oneFilterParallel                 10  thrpt  100    23464.490 ±   200.224  ops/s
+FilterBenchmark.oneFilterParallel                100  thrpt  100    23596.068 ±   222.463  ops/s
+FilterBenchmark.oneFilterParallel               1000  thrpt  100    20413.603 ±   290.502  ops/s
+FilterBenchmark.oneFilterParallel              10000  thrpt  100    12082.934 ±   344.165  ops/s
+FilterBenchmark.oneFilterParallel             100000  thrpt  100     4171.593 ±   357.832  ops/s
+FilterBenchmark.oneFilterParallel            1000000  thrpt  100      397.795 ±    47.321  ops/s
 ```
 
 
@@ -154,9 +184,38 @@ docker run -it volkodav/java-filter-benchmark:java12
 #### Results
 
 ```
+Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
+FilterBenchmark.multipleFilters                   10  thrpt   50  1191638.476 ? 17681.179  ops/s
+FilterBenchmark.multipleFilters                  100  thrpt   50   543876.880 ?  8671.057  ops/s
+FilterBenchmark.multipleFilters                 1000  thrpt   50    83373.960 ?  2184.504  ops/s
+FilterBenchmark.multipleFilters                10000  thrpt   50     9017.336 ?    60.694  ops/s
+FilterBenchmark.multipleFilters               100000  thrpt   50      895.696 ?    30.036  ops/s
+FilterBenchmark.multipleFilters              1000000  thrpt   50       75.430 ?     2.536  ops/s
+FilterBenchmark.multipleFiltersParallel           10  thrpt   50    25249.068 ?   480.633  ops/s
+FilterBenchmark.multipleFiltersParallel          100  thrpt   50    18345.598 ?   239.063  ops/s
+FilterBenchmark.multipleFiltersParallel         1000  thrpt   50    16118.267 ?   203.401  ops/s
+FilterBenchmark.multipleFiltersParallel        10000  thrpt   50    10220.834 ?   225.201  ops/s
+FilterBenchmark.multipleFiltersParallel       100000  thrpt   50     2197.861 ?   271.955  ops/s
+FilterBenchmark.multipleFiltersParallel      1000000  thrpt   50      164.429 ?    31.597  ops/s
+FilterBenchmark.oldFashionFilters                 10  thrpt   50  1970841.768 ? 51513.878  ops/s
+FilterBenchmark.oldFashionFilters                100  thrpt   50  1027088.435 ? 12909.005  ops/s
+FilterBenchmark.oldFashionFilters               1000  thrpt   50   182719.991 ?   509.940  ops/s
+FilterBenchmark.oldFashionFilters              10000  thrpt   50    19592.779 ?    41.382  ops/s
+FilterBenchmark.oldFashionFilters             100000  thrpt   50     1970.837 ?    45.844  ops/s
+FilterBenchmark.oldFashionFilters            1000000  thrpt   50      158.571 ?     7.507  ops/s
+FilterBenchmark.oneFilter                         10  thrpt   50  1437753.617 ? 21550.203  ops/s
+FilterBenchmark.oneFilter                        100  thrpt   50   732987.926 ?  8312.437  ops/s
+FilterBenchmark.oneFilter                       1000  thrpt   50   113708.602 ?   482.573  ops/s
+FilterBenchmark.oneFilter                      10000  thrpt   50    13218.784 ?    19.637  ops/s
+FilterBenchmark.oneFilter                     100000  thrpt   50     1316.214 ?    27.559  ops/s
+FilterBenchmark.oneFilter                    1000000  thrpt   50      111.053 ?     4.475  ops/s
+FilterBenchmark.oneFilterParallel                 10  thrpt   50    26917.613 ?   925.582  ops/s
+FilterBenchmark.oneFilterParallel                100  thrpt   50    20038.156 ?   379.706  ops/s
+FilterBenchmark.oneFilterParallel               1000  thrpt   50    17164.433 ?   202.813  ops/s
+FilterBenchmark.oneFilterParallel              10000  thrpt   50    12041.588 ?   117.785  ops/s
+FilterBenchmark.oneFilterParallel             100000  thrpt   50     3453.958 ?   427.210  ops/s
+FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ?    74.132  ops/s
 ```
-
-
 
 ### 10 Element Array
 

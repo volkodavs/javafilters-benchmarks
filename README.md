@@ -106,8 +106,6 @@ public void oldFashionFilters(ExecutionPlan plan, Blackhole blackhole) {
 
 ### Java 8
 
-java 8
-
 ```commandline
 docker run -it volkodav/java-filter-benchmark:java8
 ```

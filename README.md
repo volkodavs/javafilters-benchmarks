@@ -13,7 +13,7 @@ We're going to perform benchmarks against the different way to filter values in 
 ### Stream + complex filter
 
 ```java
-public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
+public void complexFilter(ExecutionPlan plan, Blackhole blackhole) {
         long count = plan.getDoubles()
                 .stream()
                 .filter(d -> d < Math.PI
@@ -45,7 +45,7 @@ public void multipleFilters(ExecutionPlan plan, Blackhole blackhole) {
 ### Parallel stream + complex filter 
 
 ```java
-public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
+public void complexFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
         long count = plan.getDoubles()
                 .stream()
                 .parallel()

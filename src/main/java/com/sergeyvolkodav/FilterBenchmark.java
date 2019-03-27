@@ -19,7 +19,7 @@ public class FilterBenchmark {
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.SECONDS)
-    public void oneFilter(ExecutionPlan plan, Blackhole blackhole) {
+    public void complexFilter(ExecutionPlan plan, Blackhole blackhole) {
         long count = plan.getDoubles()
                 .stream()
                 .filter(d -> d < Math.PI
@@ -49,7 +49,7 @@ public class FilterBenchmark {
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.SECONDS)
-    public void oneFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
+    public void complexFilterParallel(ExecutionPlan plan, Blackhole blackhole) {
         long count = plan.getDoubles()
                 .stream()
                 .parallel()

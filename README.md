@@ -217,11 +217,6 @@ FilterBenchmark.oneFilterParallel             100000  thrpt   50     3453.958 ? 
 FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ?    74.132  ops/s
 ```
 
-### Result table 
-
-<img width="864" alt="Result table" src="https://user-images.githubusercontent.com/4140597/55069830-ce5ed900-507c-11e9-9bb5-13b9f32dd0d9.png">
-
-
 ### 10 Element Array
 
 <img width="599" alt="10 Element Array" src="https://user-images.githubusercontent.com/4140597/55069282-930fda80-507b-11e9-96bf-74a374caa1e3.png">
@@ -246,6 +241,10 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 ### 1,000,000 Element Array
 
 <img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069708-95beff80-507c-11e9-9ef6-391761b3f722.png">
+
+### Summary table 
+
+<img width="879" alt="Summary table " src="https://user-images.githubusercontent.com/4140597/55069946-1120b100-507d-11e9-8ecc-0ee0f87327e8.png">
 
 
 ## Summary 

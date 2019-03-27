@@ -242,12 +242,13 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 
 <img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069708-95beff80-507c-11e9-9ef6-391761b3f722.png">
 
-### Summary table 
-
-<img width="879" alt="Summary table " src="https://user-images.githubusercontent.com/4140597/55069946-1120b100-507d-11e9-8ecc-0ee0f87327e8.png">
 
 
 ## Summary 
+
+### Summary table 
+
+<img width="879" alt="Summary table " src="https://user-images.githubusercontent.com/4140597/55069946-1120b100-507d-11e9-8ecc-0ee0f87327e8.png">
 
 On a relatively small array old fashion loop with one if clause shows the best performance results, 
 but while an array is growing java parallel streams show better results. 

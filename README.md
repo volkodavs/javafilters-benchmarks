@@ -217,17 +217,35 @@ FilterBenchmark.oneFilterParallel             100000  thrpt   50     3453.958 ? 
 FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ?    74.132  ops/s
 ```
 
+### Result table 
+
+<img width="864" alt="Result table" src="https://user-images.githubusercontent.com/4140597/55069830-ce5ed900-507c-11e9-9bb5-13b9f32dd0d9.png">
+
+
 ### 10 Element Array
+
+<img width="599" alt="10 Element Array" src="https://user-images.githubusercontent.com/4140597/55069282-930fda80-507b-11e9-96bf-74a374caa1e3.png">
 
 ### 100 Element Array
 
+<img width="599" alt="100 Element Array" src="https://user-images.githubusercontent.com/4140597/55069495-1d583e80-507c-11e9-8ab2-d684087c2366.png">
+
 ### 1,000 Element Array
+
+<img width="592" alt="1,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069562-3eb92a80-507c-11e9-993c-c9146d405fd8.png">
 
 ### 10,000 Element Array
 
+<img width="590" alt="10,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069610-542e5480-507c-11e9-8e7d-6f67489673d3.png">
+
+
 ### 100,000 Element Array
 
+<img width="593" alt="100,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069641-69a37e80-507c-11e9-8107-b4928b71483b.png">
+
 ### 1,000,000 Element Array
+
+<img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069708-95beff80-507c-11e9-9ef6-391761b3f722.png">
 
 
 ## Summary 

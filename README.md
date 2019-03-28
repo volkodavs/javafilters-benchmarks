@@ -223,38 +223,40 @@ FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ? 
 
 ### 10 Element Array
 
-<img width="599" alt="10 Element Array" src="https://user-images.githubusercontent.com/4140597/55069282-930fda80-507b-11e9-96bf-74a374caa1e3.png">
+<img width="597" alt="10 Element Array" src="https://user-images.githubusercontent.com/4140597/55191371-e5471d80-5199-11e9-99bf-0bd4d9cb3160.png">
+
 
 ### 100 Element Array
 
-<img width="599" alt="100 Element Array" src="https://user-images.githubusercontent.com/4140597/55069495-1d583e80-507c-11e9-8ab2-d684087c2366.png">
+<img width="592" alt="100 Element Array" src="https://user-images.githubusercontent.com/4140597/55191427-0871cd00-519a-11e9-8859-bc92cae9e4a9.png">
+
 
 ### 1,000 Element Array
 
-<img width="592" alt="1,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069562-3eb92a80-507c-11e9-993c-c9146d405fd8.png">
+<img width="594" alt="1,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55191470-2f300380-519a-11e9-8b89-890229d6fd40.png">
 
 ### 10,000 Element Array
 
-<img width="590" alt="10,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069610-542e5480-507c-11e9-8e7d-6f67489673d3.png">
+<img width="592" alt="10,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55191531-58509400-519a-11e9-8b06-c6799646bf6b.png">
 
 ### 100,000 Element Array
 
-<img width="593" alt="100,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069641-69a37e80-507c-11e9-8107-b4928b71483b.png">
+<img width="597" alt="100,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55191579-7918e980-519a-11e9-822d-934322543b81.png">
 
 ### 1,000,000 Element Array
 
-<img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55069708-95beff80-507c-11e9-9ef6-391761b3f722.png">
-
+<img width="594" alt="1,000,000 Element Array" src="https://user-images.githubusercontent.com/4140597/55191634-9948a880-519a-11e9-9761-6e1b7c2909f9.png">
 
 ## Summary 
 
 On a relatively small array old fashion loop with one if clause shows the best performance results, 
 but while an array is growing java parallel streams show better results. 
-According to performance results, for a performance perspective, one filter is better than multiple filters.
+According to performance results, for a performance perspective, complex filter is better than multiple filters.
 
 ### Comparison tables
 
-<img width="883" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55093062-9d49cd00-50ab-11e9-92a4-067a4a77b00d.png">
+<img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55191273-a4e79f80-5199-11e9-8c39-0b1541481049.png">
+
 
 ## License
 -------

@@ -1,6 +1,6 @@
 package com.sergeyvolkodav;
 
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +13,7 @@ import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
 
 @Warmup(iterations = 10)
-@Measurement(iterations = 10, time = 1000, timeUnit = MILLISECONDS)
+@Measurement(iterations = 10, time = 1, timeUnit = SECONDS)
 public class FilterBenchmark {
 
     @Benchmark

@@ -126,42 +126,43 @@ docker run -it volkodav/java-filter-benchmark:java8
 # CPU: 8 cores
 ```
 
-#### Results
+#### Raw Results
 
 ```
-Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
-FilterBenchmark.multipleFilters                   10  thrpt  100  1364546.517 ±  3579.906  ops/s
-FilterBenchmark.multipleFilters                  100  thrpt  100   687438.224 ±  5884.973  ops/s
-FilterBenchmark.multipleFilters                 1000  thrpt  100   110489.928 ±   800.637  ops/s
-FilterBenchmark.multipleFilters                10000  thrpt  100    12290.655 ±   104.239  ops/s
-FilterBenchmark.multipleFilters               100000  thrpt  100     1282.548 ±    36.517  ops/s
-FilterBenchmark.multipleFilters              1000000  thrpt  100      136.211 ±     2.938  ops/s
-FilterBenchmark.multipleFiltersParallel           10  thrpt  100    22482.268 ±   167.280  ops/s
-FilterBenchmark.multipleFiltersParallel          100  thrpt  100    23932.211 ±   105.224  ops/s
-FilterBenchmark.multipleFiltersParallel         1000  thrpt  100    20546.812 ±   207.322  ops/s
-FilterBenchmark.multipleFiltersParallel        10000  thrpt  100    12826.451 ±   105.562  ops/s
-FilterBenchmark.multipleFiltersParallel       100000  thrpt  100     3965.370 ±    58.927  ops/s
-FilterBenchmark.multipleFiltersParallel      1000000  thrpt  100      344.808 ±    34.809  ops/s
-FilterBenchmark.oldFashionFilters                 10  thrpt  100  2241545.032 ±  5936.237  ops/s
-FilterBenchmark.oldFashionFilters                100  thrpt  100  1067280.430 ±  2898.776  ops/s
-FilterBenchmark.oldFashionFilters               1000  thrpt  100   171715.214 ±   543.459  ops/s
-FilterBenchmark.oldFashionFilters              10000  thrpt  100    19263.648 ±    26.834  ops/s
-FilterBenchmark.oldFashionFilters             100000  thrpt  100     2038.695 ±     6.303  ops/s
-FilterBenchmark.oldFashionFilters            1000000  thrpt  100      172.616 ±     2.984  ops/s
-FilterBenchmark.oneFilter                         10  thrpt  100  1620558.903 ± 14856.116  ops/s
-FilterBenchmark.oneFilter                        100  thrpt  100   667080.168 ± 23007.882  ops/s
-FilterBenchmark.oneFilter                       1000  thrpt  100   118228.039 ±  6173.876  ops/s
-FilterBenchmark.oneFilter                      10000  thrpt  100    14281.845 ±    18.418  ops/s
-FilterBenchmark.oneFilter                     100000  thrpt  100     1468.491 ±     2.975  ops/s
-FilterBenchmark.oneFilter                    1000000  thrpt  100      130.511 ±     2.109  ops/s
-FilterBenchmark.oneFilterParallel                 10  thrpt  100    23464.490 ±   200.224  ops/s
-FilterBenchmark.oneFilterParallel                100  thrpt  100    23596.068 ±   222.463  ops/s
-FilterBenchmark.oneFilterParallel               1000  thrpt  100    20413.603 ±   290.502  ops/s
-FilterBenchmark.oneFilterParallel              10000  thrpt  100    12082.934 ±   344.165  ops/s
-FilterBenchmark.oneFilterParallel             100000  thrpt  100     4171.593 ±   357.832  ops/s
-FilterBenchmark.oneFilterParallel            1000000  thrpt  100      397.795 ±    47.321  ops/s
-```
+# Run complete. Total time: 04:36:29
 
+Benchmark                                (arraySize)   Mode  Cnt         Score         Error  Units
+FilterBenchmark.complexFilter                     10  thrpt   50   5947577.648 ±  257535.736  ops/s
+FilterBenchmark.complexFilter                    100  thrpt   50   3131081.555 ±   72868.963  ops/s
+FilterBenchmark.complexFilter                   1000  thrpt   50    489666.688 ±    6539.466  ops/s
+FilterBenchmark.complexFilter                  10000  thrpt   50     17297.424 ±      93.890  ops/s
+FilterBenchmark.complexFilter                 100000  thrpt   50      1398.702 ±      72.820  ops/s
+FilterBenchmark.complexFilter                1000000  thrpt   50        81.309 ±       0.547  ops/s
+FilterBenchmark.complexFilterParallel             10  thrpt   50     24515.743 ±     450.363  ops/s
+FilterBenchmark.complexFilterParallel            100  thrpt   50     25584.773 ±     290.249  ops/s
+FilterBenchmark.complexFilterParallel           1000  thrpt   50     24313.066 ±     425.817  ops/s
+FilterBenchmark.complexFilterParallel          10000  thrpt   50     11909.085 ±      51.534  ops/s
+FilterBenchmark.complexFilterParallel         100000  thrpt   50      3260.864 ±     522.565  ops/s
+FilterBenchmark.complexFilterParallel        1000000  thrpt   50       406.297 ±      96.590  ops/s
+FilterBenchmark.multipleFilters                   10  thrpt   50   3785766.911 ±   27971.998  ops/s
+FilterBenchmark.multipleFilters                  100  thrpt   50   1806210.041 ±   11578.529  ops/s
+FilterBenchmark.multipleFilters                 1000  thrpt   50    211435.445 ±   28585.969  ops/s
+FilterBenchmark.multipleFilters                10000  thrpt   50     12614.670 ±     370.086  ops/s
+FilterBenchmark.multipleFilters               100000  thrpt   50      1228.127 ±      21.208  ops/s
+FilterBenchmark.multipleFilters              1000000  thrpt   50        99.149 ±       1.370  ops/s
+FilterBenchmark.multipleFiltersParallel           10  thrpt   50     23896.812 ±     255.117  ops/s
+FilterBenchmark.multipleFiltersParallel          100  thrpt   50     25314.613 ±     169.724  ops/s
+FilterBenchmark.multipleFiltersParallel         1000  thrpt   50     23113.388 ±     305.605  ops/s
+FilterBenchmark.multipleFiltersParallel        10000  thrpt   50     12676.057 ±     119.555  ops/s
+FilterBenchmark.multipleFiltersParallel       100000  thrpt   50      3373.367 ±     211.108  ops/s
+FilterBenchmark.multipleFiltersParallel      1000000  thrpt   50       477.870 ±      70.878  ops/s
+FilterBenchmark.oldFashionFilters                 10  thrpt   50  45874144.758 ± 2210325.177  ops/s
+FilterBenchmark.oldFashionFilters                100  thrpt   50   4902625.828 ±   60397.844  ops/s
+FilterBenchmark.oldFashionFilters               1000  thrpt   50    662102.438 ±    5038.465  ops/s
+FilterBenchmark.oldFashionFilters              10000  thrpt   50     29390.911 ±     257.311  ops/s
+FilterBenchmark.oldFashionFilters             100000  thrpt   50      1999.032 ±       6.829  ops/s
+FilterBenchmark.oldFashionFilters            1000000  thrpt   50       200.564 ±       1.695  ops/s
+```
 
 ### Java 12 
 
@@ -185,41 +186,45 @@ docker run -it volkodav/java-filter-benchmark:java12
 # CPU: 8 cores
 ```
 
-#### Results
+#### Raw Results
 
 ```
-Benchmark                                (arraySize)   Mode  Cnt        Score       Error  Units
-FilterBenchmark.multipleFilters                   10  thrpt   50  1191638.476 ? 17681.179  ops/s
-FilterBenchmark.multipleFilters                  100  thrpt   50   543876.880 ?  8671.057  ops/s
-FilterBenchmark.multipleFilters                 1000  thrpt   50    83373.960 ?  2184.504  ops/s
-FilterBenchmark.multipleFilters                10000  thrpt   50     9017.336 ?    60.694  ops/s
-FilterBenchmark.multipleFilters               100000  thrpt   50      895.696 ?    30.036  ops/s
-FilterBenchmark.multipleFilters              1000000  thrpt   50       75.430 ?     2.536  ops/s
-FilterBenchmark.multipleFiltersParallel           10  thrpt   50    25249.068 ?   480.633  ops/s
-FilterBenchmark.multipleFiltersParallel          100  thrpt   50    18345.598 ?   239.063  ops/s
-FilterBenchmark.multipleFiltersParallel         1000  thrpt   50    16118.267 ?   203.401  ops/s
-FilterBenchmark.multipleFiltersParallel        10000  thrpt   50    10220.834 ?   225.201  ops/s
-FilterBenchmark.multipleFiltersParallel       100000  thrpt   50     2197.861 ?   271.955  ops/s
-FilterBenchmark.multipleFiltersParallel      1000000  thrpt   50      164.429 ?    31.597  ops/s
-FilterBenchmark.oldFashionFilters                 10  thrpt   50  1970841.768 ? 51513.878  ops/s
-FilterBenchmark.oldFashionFilters                100  thrpt   50  1027088.435 ? 12909.005  ops/s
-FilterBenchmark.oldFashionFilters               1000  thrpt   50   182719.991 ?   509.940  ops/s
-FilterBenchmark.oldFashionFilters              10000  thrpt   50    19592.779 ?    41.382  ops/s
-FilterBenchmark.oldFashionFilters             100000  thrpt   50     1970.837 ?    45.844  ops/s
-FilterBenchmark.oldFashionFilters            1000000  thrpt   50      158.571 ?     7.507  ops/s
-FilterBenchmark.oneFilter                         10  thrpt   50  1437753.617 ? 21550.203  ops/s
-FilterBenchmark.oneFilter                        100  thrpt   50   732987.926 ?  8312.437  ops/s
-FilterBenchmark.oneFilter                       1000  thrpt   50   113708.602 ?   482.573  ops/s
-FilterBenchmark.oneFilter                      10000  thrpt   50    13218.784 ?    19.637  ops/s
-FilterBenchmark.oneFilter                     100000  thrpt   50     1316.214 ?    27.559  ops/s
-FilterBenchmark.oneFilter                    1000000  thrpt   50      111.053 ?     4.475  ops/s
-FilterBenchmark.oneFilterParallel                 10  thrpt   50    26917.613 ?   925.582  ops/s
-FilterBenchmark.oneFilterParallel                100  thrpt   50    20038.156 ?   379.706  ops/s
-FilterBenchmark.oneFilterParallel               1000  thrpt   50    17164.433 ?   202.813  ops/s
-FilterBenchmark.oneFilterParallel              10000  thrpt   50    12041.588 ?   117.785  ops/s
-FilterBenchmark.oneFilterParallel             100000  thrpt   50     3453.958 ?   427.210  ops/s
-FilterBenchmark.oneFilterParallel            1000000  thrpt   50      278.163 ?    74.132  ops/s
+# Run complete. Total time: 04:36:20
+
+Benchmark                                (arraySize)   Mode  Cnt         Score         Error  Units
+FilterBenchmark.complexFilter                     10  thrpt   50  10338525.553 ? 1677693.433  ops/s
+FilterBenchmark.complexFilter                    100  thrpt   50   4381301.188 ?  287299.598  ops/s
+FilterBenchmark.complexFilter                   1000  thrpt   50    607572.430 ?    9367.026  ops/s
+FilterBenchmark.complexFilter                  10000  thrpt   50     30643.286 ?     472.033  ops/s
+FilterBenchmark.complexFilter                 100000  thrpt   50      1450.341 ?       3.730  ops/s
+FilterBenchmark.complexFilter                1000000  thrpt   50       138.996 ?       2.052  ops/s
+FilterBenchmark.complexFilterParallel             10  thrpt   50     21289.444 ?     183.245  ops/s
+FilterBenchmark.complexFilterParallel            100  thrpt   50     20105.239 ?     124.759  ops/s
+FilterBenchmark.complexFilterParallel           1000  thrpt   50     19418.830 ?     141.664  ops/s
+FilterBenchmark.complexFilterParallel          10000  thrpt   50     13874.585 ?     104.418  ops/s
+FilterBenchmark.complexFilterParallel         100000  thrpt   50      5334.947 ?      25.452  ops/s
+FilterBenchmark.complexFilterParallel        1000000  thrpt   50       781.046 ?       9.687  ops/s
+FilterBenchmark.multipleFilters                   10  thrpt   50   5460308.048 ?  478157.935  ops/s
+FilterBenchmark.multipleFilters                  100  thrpt   50   2227583.836 ?  113078.932  ops/s
+FilterBenchmark.multipleFilters                 1000  thrpt   50    287157.190 ?    1114.346  ops/s
+FilterBenchmark.multipleFilters                10000  thrpt   50     16268.016 ?     704.735  ops/s
+FilterBenchmark.multipleFilters               100000  thrpt   50      1531.516 ?       2.729  ops/s
+FilterBenchmark.multipleFilters              1000000  thrpt   50       123.881 ?       1.525  ops/s
+FilterBenchmark.multipleFiltersParallel           10  thrpt   50     20403.993 ?     147.247  ops/s
+FilterBenchmark.multipleFiltersParallel          100  thrpt   50     19426.222 ?      96.979  ops/s
+FilterBenchmark.multipleFiltersParallel         1000  thrpt   50     17692.433 ?      67.606  ops/s
+FilterBenchmark.multipleFiltersParallel        10000  thrpt   50     12108.482 ?      34.500  ops/s
+FilterBenchmark.multipleFiltersParallel       100000  thrpt   50      3782.756 ?      22.044  ops/s
+FilterBenchmark.multipleFiltersParallel      1000000  thrpt   50       589.972 ?      71.448  ops/s
+FilterBenchmark.oldFashionFilters                 10  thrpt   50  41024334.062 ? 1374663.440  ops/s
+FilterBenchmark.oldFashionFilters                100  thrpt   50   6011852.027 ?  246202.642  ops/s
+FilterBenchmark.oldFashionFilters               1000  thrpt   50    553243.594 ?    2217.912  ops/s
+FilterBenchmark.oldFashionFilters              10000  thrpt   50     29188.753 ?     580.958  ops/s
+FilterBenchmark.oldFashionFilters             100000  thrpt   50      2061.738 ?       8.456  ops/s
+FilterBenchmark.oldFashionFilters            1000000  thrpt   50       196.105 ?       3.203  ops/s
 ```
+
+## Graphs
 
 ### 10 Element Array
 

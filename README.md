@@ -260,8 +260,7 @@ According to performance results, for a performance perspective, complex filter 
 
 ### Comparison tables
 
-<img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55191273-a4e79f80-5199-11e9-8c39-0b1541481049.png">
-
+<img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55191948-563b0500-519b-11e9-9564-ef3cd6cc1147.png">
 
 ## License
 -------

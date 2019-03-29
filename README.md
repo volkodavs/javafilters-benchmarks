@@ -264,8 +264,12 @@ According to performance results, for a performance perspective, complex filter 
 
 ## Bonus 
 
-### Java 11 
+### Java 8 vs Java 11 
 
+<img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55243782-ce570880-5237-11e9-833e-ed79062f414d.png">
+
+
+### Raw Results 
 ```
 # Run complete. Total time: 05:01:30
 

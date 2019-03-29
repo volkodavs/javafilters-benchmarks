@@ -124,6 +124,22 @@
                     </execution>
 
                     <execution>
+                        <id>java11</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                        <configuration>
+                            <repository>volkodav/java-filter-benchmark</repository>
+                            <dockerfile>docker/Dockerfile11</dockerfile>
+                            <tag>java11</tag>
+                            <buildArgs>
+                                <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                            </buildArgs>
+                        </configuration>
+                    </execution>
+
+                    <execution>
                         <id>java12</id>
                         <goals>
                             <goal>build</goal>

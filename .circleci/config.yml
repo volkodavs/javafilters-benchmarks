@@ -26,6 +26,7 @@ jobs:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push volkodav/java-filter-benchmark:java8
+            docker push volkodav/java-filter-benchmark:java11
             docker push volkodav/java-filter-benchmark:java12
 
 

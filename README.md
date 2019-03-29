@@ -262,6 +262,230 @@ According to performance results, for a performance perspective, complex filter 
 
 <img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55191948-563b0500-519b-11e9-9564-ef3cd6cc1147.png">
 
+## Bonus 
+
+### Java 11 
+
+```
+# Run complete. Total time: 05:01:30
+
+Benchmark                                                                 (arraySize)   Mode  Cnt         Score         Error   Units
+FilterBenchmark.complexFilter                                                      10  thrpt   50  12466361.755 ± 2030887.268   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                       10  thrpt   50      1676.932 ±     261.631  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                                  10  thrpt   50       212.800 ±       3.200    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space                              10  thrpt   50      1674.431 ±     271.704  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space.norm                         10  thrpt   50       212.486 ±      13.449    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Old_Gen                                 10  thrpt   50         0.002 ±       0.001  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Old_Gen.norm                            10  thrpt   50        ≈ 10⁻⁴                  B/op
+FilterBenchmark.complexFilter:·gc.count                                            10  thrpt   50       205.000                counts
+FilterBenchmark.complexFilter:·gc.time                                             10  thrpt   50       479.000                    ms
+FilterBenchmark.complexFilter                                                     100  thrpt   50   4063599.589 ±  516570.056   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                      100  thrpt   50       547.966 ±      67.818  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                                 100  thrpt   50       212.801 ±       3.200    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space                             100  thrpt   50       547.244 ±     105.012  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space.norm                        100  thrpt   50       213.108 ±      29.999    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Old_Gen                                100  thrpt   50        ≈ 10⁻³                MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Old_Gen.norm                           100  thrpt   50        ≈ 10⁻⁴                  B/op
+FilterBenchmark.complexFilter:·gc.count                                           100  thrpt   50        67.000                counts
+FilterBenchmark.complexFilter:·gc.time                                            100  thrpt   50       118.000                    ms
+FilterBenchmark.complexFilter                                                    1000  thrpt   50    532272.455 ±   41340.119   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                     1000  thrpt   50        81.202 ±       6.305  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                                1000  thrpt   50       240.079 ±       0.008    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space                            1000  thrpt   50        89.813 ±      84.567  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space.norm                       1000  thrpt   50       269.769 ±     259.466    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Survivor_Space                        1000  thrpt   50         0.027 ±       0.093  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Survivor_Space.norm                   1000  thrpt   50         0.110 ±       0.386    B/op
+FilterBenchmark.complexFilter:·gc.count                                          1000  thrpt   50        11.000                counts
+FilterBenchmark.complexFilter:·gc.time                                           1000  thrpt   50        17.000                    ms
+FilterBenchmark.complexFilter                                                   10000  thrpt   50     16938.035 ±    1788.230   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                    10000  thrpt   50         2.843 ±       0.273  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                               10000  thrpt   50       265.526 ±       3.045    B/op
+FilterBenchmark.complexFilter:·gc.count                                         10000  thrpt   50           ≈ 0                counts
+FilterBenchmark.complexFilter                                                  100000  thrpt   50      1379.043 ±       2.495   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                   100000  thrpt   50         2.543 ±       0.001  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                              100000  thrpt   50      2909.022 ±       4.842    B/op
+FilterBenchmark.complexFilter:·gc.count                                        100000  thrpt   50           ≈ 0                counts
+FilterBenchmark.complexFilter                                                 1000000  thrpt   50       128.641 ±       2.489   ops/s
+FilterBenchmark.complexFilter:·gc.alloc.rate                                  1000000  thrpt   50        23.335 ±       0.258  MB/sec
+FilterBenchmark.complexFilter:·gc.alloc.rate.norm                             1000000  thrpt   50    299161.311 ±    6295.658    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space                         1000000  thrpt   50        12.465 ±       8.184  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Eden_Space.norm                    1000000  thrpt   50    169922.118 ±  112188.585    B/op
+FilterBenchmark.complexFilter:·gc.churn.G1_Survivor_Space                     1000000  thrpt   50         0.209 ±       0.317  MB/sec
+FilterBenchmark.complexFilter:·gc.churn.G1_Survivor_Space.norm                1000000  thrpt   50      2787.940 ±    4227.418    B/op
+FilterBenchmark.complexFilter:·gc.count                                       1000000  thrpt   50        25.000                counts
+FilterBenchmark.complexFilter:·gc.time                                        1000000  thrpt   50      1433.000                    ms
+FilterBenchmark.complexFilterParallel                                              10  thrpt   50     21711.018 ±     234.118   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                               10  thrpt   50        27.596 ±       0.298  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                          10  thrpt   50      2000.099 ±       0.075    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                      10  thrpt   50        40.705 ±      61.065  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm                 10  thrpt   50      2966.422 ±    4451.229    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                                    10  thrpt   50         5.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                     10  thrpt   50        17.000                    ms
+FilterBenchmark.complexFilterParallel                                             100  thrpt   50     20458.673 ±      97.058   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                              100  thrpt   50        90.908 ±       0.433  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                         100  thrpt   50      6992.275 ±       0.079    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                     100  thrpt   50        81.665 ±      81.676  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm                100  thrpt   50      6308.781 ±    6310.018    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                                   100  thrpt   50        10.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                    100  thrpt   50        13.000                    ms
+FilterBenchmark.complexFilterParallel                                            1000  thrpt   50     19317.632 ±     341.610   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                             1000  thrpt   50        76.695 ±       1.351  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                        1000  thrpt   50      6247.717 ±       3.616    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                    1000  thrpt   50        81.661 ±      81.671  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm               1000  thrpt   50      6603.066 ±    6608.396    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Old_Gen                       1000  thrpt   50        ≈ 10⁻⁵                MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Old_Gen.norm                  1000  thrpt   50         0.002 ±       0.005    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                                  1000  thrpt   50        10.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                   1000  thrpt   50        16.000                    ms
+FilterBenchmark.complexFilterParallel                                           10000  thrpt   50     13878.605 ±      85.435   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                            10000  thrpt   50        55.351 ±       0.337  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                       10000  thrpt   50      6277.596 ±       0.220    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                   10000  thrpt   50        40.691 ±      61.045  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm              10000  thrpt   50      4626.341 ±    6941.242    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                                 10000  thrpt   50         5.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                  10000  thrpt   50        19.000                    ms
+FilterBenchmark.complexFilterParallel                                          100000  thrpt   50      5347.627 ±      26.503   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                           100000  thrpt   50        23.516 ±       0.106  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                      100000  thrpt   50      6936.524 ±       3.505    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                  100000  thrpt   50        32.295 ±      54.766  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm             100000  thrpt   50      9614.029 ±   16303.557    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Survivor_Space              100000  thrpt   50         0.013 ±       0.047  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Survivor_Space.norm         100000  thrpt   50         3.959 ±      13.859    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                                100000  thrpt   50         4.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                 100000  thrpt   50        20.000                    ms
+FilterBenchmark.complexFilterParallel                                         1000000  thrpt   50       700.078 ±      24.806   ops/s
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate                          1000000  thrpt   50        26.183 ±       0.335  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.alloc.rate.norm                     1000000  thrpt   50     61587.928 ±    1962.624    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space                 1000000  thrpt   50        17.698 ±      15.006  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Eden_Space.norm            1000000  thrpt   50     45276.106 ±   38670.516    B/op
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Survivor_Space             1000000  thrpt   50         0.831 ±       1.131  MB/sec
+FilterBenchmark.complexFilterParallel:·gc.churn.G1_Survivor_Space.norm        1000000  thrpt   50      1991.526 ±    2710.666    B/op
+FilterBenchmark.complexFilterParallel:·gc.count                               1000000  thrpt   50        18.000                counts
+FilterBenchmark.complexFilterParallel:·gc.time                                1000000  thrpt   50      1495.000                    ms
+FilterBenchmark.multipleFilters                                                    10  thrpt   50   5357130.745 ±  708583.946   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                     10  thrpt   50      1594.550 ±     200.010  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                                10  thrpt   50       470.400 ±       3.920    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space                            10  thrpt   50      1600.917 ±     219.347  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space.norm                       10  thrpt   50       472.554 ±      29.928    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen                               10  thrpt   50         0.002 ±       0.001  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen.norm                          10  thrpt   50        ≈ 10⁻³                  B/op
+FilterBenchmark.multipleFilters:·gc.count                                          10  thrpt   50       196.000                counts
+FilterBenchmark.multipleFilters:·gc.time                                           10  thrpt   50       368.000                    ms
+FilterBenchmark.multipleFilters                                                   100  thrpt   50   1892344.050 ±  254389.853   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                    100  thrpt   50       569.503 ±      77.631  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                               100  thrpt   50       473.603 ±       3.920    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space                           100  thrpt   50       571.740 ±     122.528  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space.norm                      100  thrpt   50       471.991 ±      91.824    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen                              100  thrpt   50         0.001 ±       0.001  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen.norm                         100  thrpt   50        ≈ 10⁻³                  B/op
+FilterBenchmark.multipleFilters:·gc.count                                         100  thrpt   50        70.000                counts
+FilterBenchmark.multipleFilters:·gc.time                                          100  thrpt   50       122.000                    ms
+FilterBenchmark.multipleFilters                                                  1000  thrpt   50    163634.561 ±   20582.764   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                   1000  thrpt   50        49.938 ±       6.278  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                              1000  thrpt   50       480.267 ±       0.036    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space                          1000  thrpt   50        57.091 ±      70.758  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space.norm                     1000  thrpt   50       546.789 ±     706.165    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen                             1000  thrpt   50        ≈ 10⁻⁴                MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Old_Gen.norm                        1000  thrpt   50         0.002 ±       0.008    B/op
+FilterBenchmark.multipleFilters:·gc.count                                        1000  thrpt   50         7.000                counts
+FilterBenchmark.multipleFilters:·gc.time                                         1000  thrpt   50        16.000                    ms
+FilterBenchmark.multipleFilters                                                 10000  thrpt   50     10339.167 ±    1052.948   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                  10000  thrpt   50         3.384 ±       0.292  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                             10000  thrpt   50       517.826 ±       6.407    B/op
+FilterBenchmark.multipleFilters:·gc.count                                       10000  thrpt   50           ≈ 0                counts
+FilterBenchmark.multipleFilters                                                100000  thrpt   50       919.656 ±       2.521   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                 100000  thrpt   50         2.612 ±       0.001  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                            100000  thrpt   50      4481.503 ±      11.367    B/op
+FilterBenchmark.multipleFilters:·gc.count                                      100000  thrpt   50           ≈ 0                counts
+FilterBenchmark.multipleFilters                                               1000000  thrpt   50        88.546 ±       1.102   ops/s
+FilterBenchmark.multipleFilters:·gc.alloc.rate                                1000000  thrpt   50        23.294 ±       0.273  MB/sec
+FilterBenchmark.multipleFilters:·gc.alloc.rate.norm                           1000000  thrpt   50    434715.070 ±    5591.225    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space                       1000000  thrpt   50        13.432 ±       8.456  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Eden_Space.norm                  1000000  thrpt   50    262019.285 ±  165765.627    B/op
+FilterBenchmark.multipleFilters:·gc.churn.G1_Survivor_Space                   1000000  thrpt   50         0.172 ±       0.302  MB/sec
+FilterBenchmark.multipleFilters:·gc.churn.G1_Survivor_Space.norm              1000000  thrpt   50      3325.667 ±    5833.705    B/op
+FilterBenchmark.multipleFilters:·gc.count                                     1000000  thrpt   50        25.000                counts
+FilterBenchmark.multipleFilters:·gc.time                                      1000000  thrpt   50      1462.000                    ms
+FilterBenchmark.multipleFiltersParallel                                            10  thrpt   50     20937.463 ±     311.480   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                             10  thrpt   50        38.747 ±       0.576  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                        10  thrpt   50      2912.103 ±       0.079    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space                    10  thrpt   50        40.705 ±      61.065  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm               10  thrpt   50      3068.570 ±    4605.469    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                                  10  thrpt   50         5.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                                   10  thrpt   50        17.000                    ms
+FilterBenchmark.multipleFiltersParallel                                           100  thrpt   50     19801.562 ±     109.412   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                            100  thrpt   50       123.023 ±       0.680  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                       100  thrpt   50      9776.285 ±       0.082    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space                   100  thrpt   50       122.513 ±      93.583  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm              100  thrpt   50      9784.874 ±    7474.610    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                                 100  thrpt   50        15.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                                  100  thrpt   50        20.000                    ms
+FilterBenchmark.multipleFiltersParallel                                          1000  thrpt   50     17768.898 ±      95.230   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                           1000  thrpt   50        98.486 ±       0.528  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                      1000  thrpt   50      8722.299 ±       0.093    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space                  1000  thrpt   50        89.839 ±      84.592  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm             1000  thrpt   50      7977.133 ±    7512.054    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                                1000  thrpt   50        11.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                                 1000  thrpt   50        16.000                    ms
+FilterBenchmark.multipleFiltersParallel                                         10000  thrpt   50     12450.718 ±     276.309   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                          10000  thrpt   50        69.241 ±       1.532  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                     10000  thrpt   50      8753.047 ±       0.729    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space                 10000  thrpt   50        57.159 ±      70.843  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm            10000  thrpt   50      7278.806 ±    9031.549    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Old_Gen                    10000  thrpt   50        ≈ 10⁻⁴                MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Old_Gen.norm               10000  thrpt   50         0.025 ±       0.087    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                               10000  thrpt   50         7.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                                10000  thrpt   50        12.000                    ms
+FilterBenchmark.multipleFiltersParallel                                        100000  thrpt   50      3781.631 ±     415.889   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                         100000  thrpt   50        23.239 ±       2.299  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                    100000  thrpt   50      9731.839 ±      87.625    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space                100000  thrpt   50        32.299 ±      54.773  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm           100000  thrpt   50     14358.034 ±   24824.112    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Survivor_Space            100000  thrpt   50         0.013 ±       0.047  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Survivor_Space.norm       100000  thrpt   50         6.572 ±      23.005    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                              100000  thrpt   50         4.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                               100000  thrpt   50        20.000                    ms
+FilterBenchmark.multipleFiltersParallel                                       1000000  thrpt   50       488.838 ±      68.437   ops/s
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate                        1000000  thrpt   50        26.152 ±       0.416  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.alloc.rate.norm                   1000000  thrpt   50     92652.338 ±    9400.643    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space               1000000  thrpt   50        18.108 ±      15.223  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Eden_Space.norm          1000000  thrpt   50     65525.131 ±   56079.578    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Survivor_Space           1000000  thrpt   50         0.859 ±       1.070  MB/sec
+FilterBenchmark.multipleFiltersParallel:·gc.churn.G1_Survivor_Space.norm      1000000  thrpt   50      3093.630 ±    3997.049    B/op
+FilterBenchmark.multipleFiltersParallel:·gc.count                             1000000  thrpt   50        18.000                counts
+FilterBenchmark.multipleFiltersParallel:·gc.time                              1000000  thrpt   50      1443.000                    ms
+FilterBenchmark.oldFashionFilters                                                  10  thrpt   50  46261391.527 ± 1745620.107   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                                   10  thrpt   50         0.001 ±       0.001  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                              10  thrpt   50        ≈ 10⁻⁴                  B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                        10  thrpt   50           ≈ 0                counts
+FilterBenchmark.oldFashionFilters                                                 100  thrpt   50   6247881.806 ±  153023.348   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                                  100  thrpt   50         0.004 ±       0.001  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                             100  thrpt   50         0.001 ±       0.001    B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                       100  thrpt   50           ≈ 0                counts
+FilterBenchmark.oldFashionFilters                                                1000  thrpt   50    498523.478 ±    2361.365   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                                 1000  thrpt   50         0.026 ±       0.001  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                            1000  thrpt   50         0.082 ±       0.003    B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                      1000  thrpt   50           ≈ 0                counts
+FilterBenchmark.oldFashionFilters                                               10000  thrpt   50     27134.481 ±     461.569   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                                10000  thrpt   50         0.261 ±       0.001  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                           10000  thrpt   50        15.152 ±       0.266    B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                     10000  thrpt   50           ≈ 0                counts
+FilterBenchmark.oldFashionFilters                                              100000  thrpt   50      1958.948 ±      20.090   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                               100000  thrpt   50         2.332 ±       0.002  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                          100000  thrpt   50      1879.812 ±      20.180    B/op
+FilterBenchmark.oldFashionFilters:·gc.churn.G1_Eden_Space                      100000  thrpt   50         3.368 ±       5.053  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.churn.G1_Eden_Space.norm                 100000  thrpt   50      2904.252 ±    4356.998    B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                    100000  thrpt   50         5.000                counts
+FilterBenchmark.oldFashionFilters:·gc.time                                     100000  thrpt   50        35.000                    ms
+FilterBenchmark.oldFashionFilters                                             1000000  thrpt   50       191.030 ±       2.196   ops/s
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate                              1000000  thrpt   50        23.420 ±       0.246  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.alloc.rate.norm                         1000000  thrpt   50    201533.144 ±    2422.021    B/op
+FilterBenchmark.oldFashionFilters:·gc.churn.G1_Eden_Space                     1000000  thrpt   50         9.133 ±       7.493  MB/sec
+FilterBenchmark.oldFashionFilters:·gc.churn.G1_Eden_Space.norm                1000000  thrpt   50     83325.948 ±   68154.777    B/op
+FilterBenchmark.oldFashionFilters:·gc.count                                   1000000  thrpt   50        20.000                counts
+FilterBenchmark.oldFashionFilters:·gc.time                                    1000000  thrpt   50      1089.000                    ms
+```
+
 ## License
 -------
     MIT License

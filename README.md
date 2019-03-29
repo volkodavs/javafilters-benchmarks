@@ -280,6 +280,9 @@ According to performance results, for a performance perspective, complex filter 
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
 ```
+
+#### Comparison tables
+
 <img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55243782-ce570880-5237-11e9-833e-ed79062f414d.png">
 
 

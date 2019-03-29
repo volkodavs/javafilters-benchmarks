@@ -266,6 +266,20 @@ According to performance results, for a performance perspective, complex filter 
 
 ### Java 8 vs Java 11 
 
+#### Params 
+
+```
+# openjdk version "11.0.2" 2019-01-15
+# OpenJDK Runtime Environment (build 11.0.2+9-Debian-3bpo91)
+# OpenJDK 64-Bit Server VM (build 11.0.2+9-Debian-3bpo91, mixed mode, sharing)
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -XX:+UseG1GC -server -Xmx1024m -Xms1024m
+# Warmup: 10 iterations, 10 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+```
 <img width="881" alt="Summary table" src="https://user-images.githubusercontent.com/4140597/55243782-ce570880-5237-11e9-833e-ed79062f414d.png">
 
 
